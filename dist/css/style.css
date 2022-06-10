@@ -1,0 +1,259 @@
+@import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background: #111;
+}
+
+.wrapper {
+  min-height: 100vh;
+  overflow: hidden;
+  background: url("../img/day/cloudy.jpg") center/cover no-repeat;
+  color: #fff;
+  position: relative;
+  transition: 0.5s;
+  opacity: 1;
+}
+.wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+.header__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 0;
+}
+.header__item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.header__ico {
+  display: flex;
+}
+.header__ico img {
+  width: 75px;
+  height: 100%;
+}
+.header__text {
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+.header__title {
+  font-size: 22px;
+  font-weight: 600;
+}
+.header__subtitle {
+  margin-top: 8px;
+  opacity: 0.8;
+  font-size: 14px;
+}
+.header__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 20px;
+  border: 2px solid #03a9f4;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #03a9f4;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.preloader {
+  background: #b8f0ff;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: visible;
+  z-index: 999;
+  transition: all 0.3s linear;
+}
+
+.hide-preloader {
+  z-index: -999;
+  visibility: hidden;
+}
+
+.weather-app__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 2em 3em 4em 3em;
+}
+.weather-app__title {
+  font-size: 20px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+.weather-app__location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.weather-app__temp {
+  font-size: 7em;
+  margin: 0;
+}
+.weather-app__city {
+  margin: 0 1em;
+}
+.weather-app__city h1 {
+  margin: 0;
+  margin-bottom: 0.2em;
+  font-size: 3em;
+}
+
+.weather__now {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 1.5em;
+}
+.weather__now img {
+  width: 58px;
+  height: 58px;
+}
+
+.panel {
+  position: absolute;
+  width: 35%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: rgba(110, 110, 110, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  z-index: 1;
+  padding: 3em 2em;
+  overflow-y: scroll;
+}
+.panel ul {
+  padding: 0 0 1em 0;
+  margin: 2em 0;
+  border-bottom: 1px #ccc solid;
+}
+.panel ul li {
+  color: #ccc;
+  margin: 2.5em 0;
+}
+.panel ul h4 {
+  margin: 3em 0;
+  text-transform: capitalize;
+}
+.panel__location-input {
+  margin-bottom: 3em;
+}
+.panel__search {
+  background: none;
+  border: none;
+  border-bottom: 1px #ccc solid;
+  padding: 0 1em 0.5em 0;
+  width: 80%;
+  color: #fff;
+  font-size: 1.1em;
+}
+.panel__search:focus {
+  outline: none;
+}
+.panel__search::placeholder {
+  color: #ccc;
+}
+.panel__submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1.5em;
+  margin: 0;
+  background-color: #fa6d1b;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: 0.4s;
+}
+.panel__submit:hover {
+  background: #fff !important;
+  color: #000;
+}
+
+.panel::-webkit-scrollbar {
+  display: none;
+}
+
+.cities__city {
+  display: block;
+  cursor: pointer;
+  transition: 150ms ease;
+}
+.cities__city:hover {
+  color: #fff;
+}
+
+.details li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+  .panel,
+.weather-app__container {
+    position: relative;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .wrapper {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 405px) {
+  .weather-app__title {
+    margin-bottom: 25px;
+  }
+  .weather-app__temp {
+    font-size: 3em;
+  }
+  .weather-app__city h1 {
+    font-size: 2.5em;
+  }
+}

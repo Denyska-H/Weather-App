@@ -1,0 +1,58 @@
+<main>
+	<div class="preloader">
+		<img src="@img/loader.gif" alt="">
+	</div>
+	<section class="weather-app">
+		<div class="weather-app__container">
+			<h3 class="weather-app__title">weather app</h3>
+			<div class="weather-app__location">
+				<h1 class="weather-app__temp">16&#176;</h1>
+				<div class="weather-app__city">
+					<h1 class="weather-app__name">London</h1>
+					<small>
+						<span class="weather-app__time">06:09</span>
+						<span>-</span>
+						<span class="weather-app__date">
+							Monday Sep 19
+						</span>
+					</small>
+				</div>
+				<div class="weather">
+					<div class="weather__now">
+						<img src="@img/icons/day/119.png" class="weather__icon" alt="icon">
+						<span class="weather__condition">Cloudy</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel">
+			<form class="panel__location-input">
+				<input type="text" class="panel__search" placeholder="Another location" autocomplete="off">
+				<button type="submit" class="panel__submit">
+					<i class="fas fa-search"></i>
+				</button>
+			</form>
+			<ul class="cities">
+				<li class="cities__city">Kiev</li>
+				<li class="cities__city">Tokyo</li>
+				<li class="cities__city">Paris</li>
+				<li class="cities__city">Oslo</li>
+			</ul>
+			<ul class="details">
+				<h4>weather details</h4>
+				<li>
+					<span>Cloudy</span>
+					<span class="details__cloud">89%</span>
+				</li>
+				<li>
+					<span>Humidity</span>
+					<span class="details__humidity">89%</span>
+				</li>
+				<li>
+					<span>Wind</span>
+					<span class="details__wind">8km/h</span>
+				</li>
+			</ul>
+		</div>
+	</section>
+</main>

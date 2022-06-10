@@ -1,0 +1,51 @@
+.header {
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 35px 0;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+	}
+
+	&__ico {
+		display: flex;
+		img {
+			width: 75px;
+			height: 100%;
+		}
+	}
+
+	&__text {
+		color: #ffffff;
+		letter-spacing: 1px;
+	}
+
+	&__title {
+		font-size: 22px;
+		font-weight: 600;
+	}
+
+	&__subtitle {
+		margin-top: 8px;
+		opacity: 0.8;
+		font-size: 14px;
+	}
+
+	&__button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 7px 20px;
+		border: 2px solid #03a9f4;
+		border-radius: 20px;
+		text-decoration: none;
+		color: #03a9f4;
+		font-size: 14px;
+		letter-spacing: 1px;
+	}
+}

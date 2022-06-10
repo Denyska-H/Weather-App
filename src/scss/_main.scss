@@ -1,0 +1,208 @@
+// Preloader
+.preloader {
+	background: #b8f0ff;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	visibility: visible;
+	z-index: 999;
+	transition: all 0.3s linear;
+}
+
+// Hide preloader
+.hide-preloader {
+	z-index: -999;
+	visibility: hidden;
+}
+
+// Weather app
+.weather-app {
+	&__container {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-direction: column;
+		padding: 2em 3em 4em 3em;
+	}
+
+	&__title {
+		font-size: 20px;
+		text-transform: capitalize;
+		letter-spacing: 2px;
+	}
+
+	&__location {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__temp {
+		font-size: 7em;
+		margin: 0;
+	}
+
+	&__city {
+		margin: 0 1em;
+		h1 {
+			margin: 0;
+			margin-bottom: 0.2em;
+			font-size: 3em;
+		}
+	}
+}
+
+// Weather info
+.weather {
+	&__now {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+
+		img {
+			width: 58px;
+			height: 58px;
+		}
+		margin: 0 1.5em;
+	}
+}
+
+// Search panel
+.panel {
+	position: absolute;
+	width: 35%;
+	height: 100%;
+	top: 0;
+	right: 0;
+	background: rgba(110, 110, 110, 0.25);
+	box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	z-index: 1;
+	padding: 3em 2em;
+	overflow-y: scroll;
+
+	ul {
+		padding: 0 0 1em 0;
+		margin: 2em 0;
+		border-bottom: 1px #ccc solid;
+
+		li {
+			color: #ccc;
+			margin: 2.5em 0;
+		}
+
+		h4 {
+			margin: 3em 0;
+			text-transform: capitalize;
+		}
+	}
+
+	&__location-input {
+		margin-bottom: 3em;
+	}
+
+	&__search {
+		background: none;
+		border: none;
+		border-bottom: 1px #ccc solid;
+		padding: 0 1em 0.5em 0;
+		width: 80%;
+		color: #fff;
+		font-size: 1.1em;
+
+		&:focus {
+			outline: none;
+		}
+
+		&::placeholder {
+			color: #ccc;
+		}
+	}
+
+	&__submit {
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 1.5em;
+		margin: 0;
+		background-color: #fa6d1b;
+		color: #fff;
+		cursor: pointer;
+		font-size: 1.2em;
+		transition: 0.4s;
+
+		&:hover {
+			background: #fff !important;
+			color: #000;
+		}
+	}
+}
+
+// Scrollbar off
+.panel::-webkit-scrollbar {
+	display: none;
+}
+
+// Default cities
+.cities {
+	&__city {
+		display: block;
+		cursor: pointer;
+		transition: 150ms ease;
+		&:hover {
+			color: #fff;
+		}
+	}
+}
+
+// Weather details
+.details {
+	li {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.panel,
+	.weather-app__container {
+		position: relative;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.wrapper {
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 405px) {
+	.weather-app {
+		&__title {
+			margin-bottom: 25px;
+		}
+		&__temp {
+			font-size: 3em;
+		}
+		&__city {
+			h1 {
+				font-size: 2.5em;
+			}
+		}
+	}
+}

@@ -1,0 +1,25 @@
+@use "sass:math";
+
+// Convert to %
+@function prc($pxFirst, $pxSecond) {
+	$result: math.div($pxFirst, $pxSecond) * 100%;
+	@return $result;
+}
+
+// Rem
+@function rem($px) {
+	$result: math.div($px, 16) + rem;
+	@return $result;
+}
+
+// Em
+@function em($px) {
+	$result: math.div($px, 16) + em;
+	@return $result;
+}
+
+// Index
+@function index($index, $side) {
+	$result: calc($index * $side);
+	@return $result;
+}

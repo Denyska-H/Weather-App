@@ -1,0 +1,16 @@
+// Additional nullstyle
+@import "./nullstyle";
+
+// Functions, mixins and vars
+@import "./vars";
+@import "./mixins";
+@import "./functions";
+
+// Global SCSS imports
+@import "./global";
+@import "./fonts";
+
+// Sections SCSS imports
+@import "./header";
+@import "./main";
+@import "./footer";

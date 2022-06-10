@@ -1,0 +1,28 @@
+// Body
+body {
+	font-family: "Rubik", sans-serif;
+	background: #111;
+}
+
+// h - weight
+
+// Wrapper
+.wrapper {
+	min-height: 100vh;
+	overflow: hidden;
+	background: url("../img/day/cloudy.jpg") center/cover no-repeat;
+	color: #fff;
+	position: relative;
+	transition: 0.5s;
+	opacity: 1;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.3);
+		z-index: 0;
+	}
+}
