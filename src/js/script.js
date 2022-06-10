@@ -103,7 +103,7 @@ const forecast = (data) => {
 
 	// icons
 	const iconId = data.current.condition.icon.substr("//cdn.weatherapi.com/weather/64x64/".length);
-	icon.src = `img/icons/${iconId}`;
+	icon.src = `dist/img/icons/${iconId}`;
 
 	// background
 	const code = data.current.condition.code;
@@ -116,7 +116,7 @@ const forecast = (data) => {
 
 	// Clear weather
 	if (code === 1000) {
-		wrapper.style.backgroundImage = `url(./img/${timeOfDay}/clear.jpg)`;
+		wrapper.style.backgroundImage = `url(dist/img/${timeOfDay}/clear.jpg)`;
 
 		searchBtn.style.background = "#e5ba92";
 		if (timeOfDay === 'night') {
@@ -138,7 +138,7 @@ const forecast = (data) => {
 		code === 1279 ||
 		code === 1282
 	) {
-		wrapper.style.backgroundImage = `url(./img/${timeOfDay}/cloudy.jpg)`;
+		wrapper.style.backgroundImage = `url(dist/img/${timeOfDay}/cloudy.jpg)`;
 		searchBtn.style.background = "#fa6d1b";
 		if (timeOfDay === 'night') {
 			searchBtn.style.background = "#181e27";
@@ -166,7 +166,7 @@ const forecast = (data) => {
 		code === 1249 ||
 		code === 1252
 	) {
-		wrapper.style.backgroundImage = `url(./img/${timeOfDay}/rainy.jpg)`;
+		wrapper.style.backgroundImage = `url(dist/img/${timeOfDay}/rainy.jpg)`;
 		searchBtn.style.background = "#647d75";
 		if (timeOfDay === 'night') {
 			searchBtn.style.background = "#325c80";
@@ -175,7 +175,7 @@ const forecast = (data) => {
 
 	// Snow
 	else {
-		wrapper.style.backgroundImage = `url(./img/${timeOfDay}/snowy.jpg)`;
+		wrapper.style.backgroundImage = `url(dist/img/${timeOfDay}/snowy.jpg)`;
 		searchBtn.style.background = "#4d72aa";
 		if (timeOfDay === 'night') {
 			searchBtn.style.background = "#1b1b1b";

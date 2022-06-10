@@ -4,12 +4,13 @@ const rootFolder = nodePath.basename(nodePath.resolve());
 
 const buildFolder = `./dist`;
 const srcFolder = `./src`;
+const withoutFolder = `./`
 
 export const path = {
 	build: {
 		js: `${buildFolder}/js/`,
 		css: `${buildFolder}/css/`,
-		html: `${buildFolder}/`,
+		html: `${withoutFolder}/`,
 		images: `${buildFolder}/img/`,
 		media: `${buildFolder}/media/`,
 		files: `${buildFolder}/files/`

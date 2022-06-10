@@ -1,8 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html,
@@ -27,9 +29,12 @@ body {
   background: url("../img/day/cloudy.jpg") center/cover no-repeat;
   color: #fff;
   position: relative;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
   opacity: 1;
 }
+
 .wrapper::before {
   content: "";
   position: absolute;
@@ -42,40 +47,65 @@ body {
 }
 
 .header__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 35px 0;
 }
+
 .header__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 15px;
 }
+
 .header__ico {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .header__ico img {
   width: 75px;
   height: 100%;
 }
+
 .header__text {
   color: #ffffff;
   letter-spacing: 1px;
 }
+
 .header__title {
   font-size: 22px;
   font-weight: 600;
 }
+
 .header__subtitle {
   margin-top: 8px;
   opacity: 0.8;
   font-size: 14px;
 }
+
 .header__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 7px 20px;
   border: 2px solid #03a9f4;
   border-radius: 20px;
@@ -94,11 +124,19 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   visibility: visible;
   z-index: 999;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
 
@@ -113,29 +151,49 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 2em 3em 4em 3em;
 }
+
 .weather-app__title {
   font-size: 20px;
   text-transform: capitalize;
   letter-spacing: 2px;
 }
+
 .weather-app__location {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .weather-app__temp {
   font-size: 7em;
   margin: 0;
 }
+
 .weather-app__city {
   margin: 0 1em;
 }
+
 .weather-app__city h1 {
   margin: 0;
   margin-bottom: 0.2em;
@@ -143,11 +201,19 @@ body {
 }
 
 .weather__now {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 0 1.5em;
 }
+
 .weather__now img {
   width: 58px;
   height: 58px;
@@ -160,29 +226,36 @@ body {
   top: 0;
   right: 0;
   background: rgba(110, 110, 110, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.18);
   z-index: 1;
   padding: 3em 2em;
   overflow-y: scroll;
 }
+
 .panel ul {
   padding: 0 0 1em 0;
   margin: 2em 0;
   border-bottom: 1px #ccc solid;
 }
+
 .panel ul li {
   color: #ccc;
   margin: 2.5em 0;
 }
+
 .panel ul h4 {
   margin: 3em 0;
   text-transform: capitalize;
 }
+
 .panel__location-input {
   margin-bottom: 3em;
 }
+
 .panel__search {
   background: none;
   border: none;
@@ -192,12 +265,31 @@ body {
   color: #fff;
   font-size: 1.1em;
 }
+
 .panel__search:focus {
   outline: none;
 }
+
+.panel__search::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+.panel__search::-moz-placeholder {
+  color: #ccc;
+}
+
+.panel__search:-ms-input-placeholder {
+  color: #ccc;
+}
+
+.panel__search::-ms-input-placeholder {
+  color: #ccc;
+}
+
 .panel__search::placeholder {
   color: #ccc;
 }
+
 .panel__submit {
   position: absolute;
   top: 0;
@@ -208,8 +300,11 @@ body {
   color: #fff;
   cursor: pointer;
   font-size: 1.2em;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
   transition: 0.4s;
 }
+
 .panel__submit:hover {
   background: #fff !important;
   color: #000;
@@ -222,37 +317,50 @@ body {
 .cities__city {
   display: block;
   cursor: pointer;
+  -webkit-transition: 150ms ease;
+  -o-transition: 150ms ease;
   transition: 150ms ease;
 }
+
 .cities__city:hover {
   color: #fff;
 }
 
 .details li {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 800px) {
   .panel,
-.weather-app__container {
+  .weather-app__container {
     position: relative;
     width: 100%;
   }
 }
+
 @media screen and (max-width: 500px) {
   .wrapper {
     font-size: 12px;
   }
 }
+
 @media screen and (max-width: 405px) {
   .weather-app__title {
     margin-bottom: 25px;
   }
+
   .weather-app__temp {
     font-size: 3em;
   }
+
   .weather-app__city h1 {
     font-size: 2.5em;
   }
